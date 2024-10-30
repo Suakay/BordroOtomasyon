@@ -1,5 +1,4 @@
-﻿
-using BordroOtomasyon.Domain.Enums;
+﻿using BordroOtomasyon.Domain.Enums;
 using BordroOtomasyon.Domain.Models.Core.BaseEntities;
 using BordroOtomasyon.Infrastructure.Configurations;
 using Microsoft.AspNetCore.Identity;
@@ -12,17 +11,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BordroOtomasyon.Infrastructure.AppDbContext
+namespace BordroOtomasyon.Infrastructure.Context
 {
-    public class AppDbContext : IdentityDbContext<IdentityUser, IdentityRole, string>
+     public class AppDbContext:IdentityDbContext<IdentityUser, IdentityRole,string>
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
-        //DbSetler gelecek
-
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.ApplyConfigurationsFromAssembly(typeof(IEntityConfiguration).Assembly);
-
             base.OnModelCreating(builder);
         }
         public override int SaveChanges()
@@ -56,7 +52,7 @@ namespace BordroOtomasyon.Infrastructure.AppDbContext
                 return;
             }
             entry.State = EntityState.Modified;
-            entry.Entity.Status=Status.Deleted;
+            entry.Entity.Status = Status.Deleted;
             entity.DeletedDate = DateTime.Now;
         }
 
@@ -81,13 +77,11 @@ namespace BordroOtomasyon.Infrastructure.AppDbContext
 
         }
 
-
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken)
         {
             SetBaseProperties();
             return base.SaveChangesAsync(cancellationToken);
 
         }
-
     }
 }
