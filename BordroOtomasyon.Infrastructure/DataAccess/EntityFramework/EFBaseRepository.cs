@@ -18,7 +18,7 @@ namespace BordroOtomasyon.Infrastructure.DataAccess.EntityFramework
         protected readonly DbContext _context;
       
         protected readonly DbSet<TEntity> _table;
-        public EFBaseRepository(DbContext context, DbSet<TEntity> table)
+        public EFBaseRepository(DbContext context)
         {
             _context = context;
             _table = _context.Set<TEntity>();
