@@ -1,4 +1,5 @@
-﻿using BordroOtomasyon.Domain.Models.Core.BaseEntities;
+﻿
+using BordroOtomasyon.Domain.Core.BaseEntities;
 using System;
 using System.Collections.Generic;
 using System.Linq;

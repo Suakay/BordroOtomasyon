@@ -1,5 +1,7 @@
 ﻿
+using BordroOtomasyon.Domain.Entities;
 using BordroOtomasyon.Infrastructure.Context;
+using BordroOtomasyon.Infrastructure.Seeds;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -18,8 +20,12 @@ namespace BordroOtomasyon.Infrastructure.Extentions
             services.AddDbContext<AppDbContext>(opt =>
             {
                 opt.UseLazyLoadingProxies();
-                opt.UseSqlServer(configuration.GetConnectionString("AppConnectionString"));
+                opt.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
             });
+
+           AdminSeed.SeedAsync(configuration).GetAwaiter().GetResult();//Migrationda burası kapatılmalı.
+            
+
             return services;
         }
     }

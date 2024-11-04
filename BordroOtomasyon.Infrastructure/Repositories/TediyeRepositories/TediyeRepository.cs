@@ -1,7 +1,9 @@
-﻿using BordroOtomasyon.Domain.Models.Entites;
+﻿
+using BordroOtomasyon.Domain.Entities;
 using BordroOtomasyon.Infrastructure.Context;
-using BordroOtomasyon.Infrastructure.DataAccess.EntityFramework;
+
 using Microsoft.EntityFrameworkCore;
+using MVCFinalProje.Infrastructure.DataAccess.EntityFramework;
 using System;
 using System.Collections.Generic;
 using System.Linq;

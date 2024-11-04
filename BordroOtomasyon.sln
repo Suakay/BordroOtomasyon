@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34616.47
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BordroOtomasyon.Domain", "BordroOtomasyon.Domain\BordroOtomasyon.Domain.csproj", "{14A3C6CB-6316-4552-B5E0-1BC6929710C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BordroOtomasyon.Infrastructure", "BordroOtomasyon.Infrastructure\BordroOtomasyon.Infrastructure.csproj", "{8EC8C847-0A4C-433A-AFEE-BEA8A04CF779}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BordroOtomasyon.Infrastructure", "BordroOtomasyon.Infrastructure\BordroOtomasyon.Infrastructure.csproj", "{8EC8C847-0A4C-433A-AFEE-BEA8A04CF779}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BordroOtomasyon.Business", "BordroOtomasyon.Business\BordroOtomasyon.Business.csproj", "{99CA6677-2061-432E-B5B0-CE436E0659EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BordroOtomasyon.Business", "BordroOtomasyon.Business\BordroOtomasyon.Business.csproj", "{99CA6677-2061-432E-B5B0-CE436E0659EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BordroOtomasyon.UI", "BordroOtomasyon.UI\BordroOtomasyon.UI.csproj", "{CBA89B1E-0150-4872-8ACB-67D7F29C2CB1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BordroOtomasyon.UI", "BordroOtomasyon.UI\BordroOtomasyon.UI.csproj", "{CBA89B1E-0150-4872-8ACB-67D7F29C2CB1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BordroOtomasyon.Domain", "BordroOtomasyon.Domain\BordroOtomasyon.Domain.csproj", "{A706ECCE-87FC-45FB-900E-D3B14C14A434}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{14A3C6CB-6316-4552-B5E0-1BC6929710C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{14A3C6CB-6316-4552-B5E0-1BC6929710C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{14A3C6CB-6316-4552-B5E0-1BC6929710C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{14A3C6CB-6316-4552-B5E0-1BC6929710C8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8EC8C847-0A4C-433A-AFEE-BEA8A04CF779}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8EC8C847-0A4C-433A-AFEE-BEA8A04CF779}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8EC8C847-0A4C-433A-AFEE-BEA8A04CF779}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +29,10 @@ Global
 		{CBA89B1E-0150-4872-8ACB-67D7F29C2CB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CBA89B1E-0150-4872-8ACB-67D7F29C2CB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CBA89B1E-0150-4872-8ACB-67D7F29C2CB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A706ECCE-87FC-45FB-900E-D3B14C14A434}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A706ECCE-87FC-45FB-900E-D3B14C14A434}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A706ECCE-87FC-45FB-900E-D3B14C14A434}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A706ECCE-87FC-45FB-900E-D3B14C14A434}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

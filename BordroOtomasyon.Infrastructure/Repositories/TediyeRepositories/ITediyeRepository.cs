@@ -1,4 +1,5 @@
-﻿using BordroOtomasyon.Domain.Models.Entites;
+﻿
+using BordroOtomasyon.Domain.Entities;
 using BordroOtomasyon.Infrastructure.DataAccess.Interfaces;
 using MVCFinalProje.Infrastructure.DataAccess.Interfaces;
 using System;

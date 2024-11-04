@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BordroOtomasyon.Domain.Enums
+namespace BordroOtomasyon.Domain.Core.Interfaces
 {
-    public enum Roles
+    public interface IEntity
     {
-        Admin=1,
-
+        public Guid Id { get; set; }
     }
 }

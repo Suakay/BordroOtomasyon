@@ -1,4 +1,4 @@
-﻿using BordroOtomasyon.Domain.Interfaces;
+﻿
 using MVCFinalProje.Infrastructure.DataAccess.Interfaces;
 using System;
 using System.Collections.Generic;
