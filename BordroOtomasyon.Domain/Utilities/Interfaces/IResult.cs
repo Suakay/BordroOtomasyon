@@ -1,8 +1,15 @@
-﻿namespace BordroOtomasyon.Domain.Utilities.Interfaces
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace BordroOtomasyon.Domain.Utilities.Interfaces
 {
     public interface IResult
     {
-        public bool IsSuccess { get;  }
-        public string Message { get; }
+        public bool IsSucces {  get; }  
+        public string Message {  get; } 
+
     }
 }

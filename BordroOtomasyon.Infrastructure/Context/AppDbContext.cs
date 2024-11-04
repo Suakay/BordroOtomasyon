@@ -1,5 +1,7 @@
-﻿using BordroOtomasyon.Domain.Enums;
-using BordroOtomasyon.Domain.Models.Core.BaseEntities;
+﻿using BordroOtomasyon.Domain.Core.BaseEntities;
+using BordroOtomasyon.Domain.Entities;
+using BordroOtomasyon.Domain.Enums;
+
 using BordroOtomasyon.Infrastructure.Configurations;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -16,6 +18,10 @@ namespace BordroOtomasyon.Infrastructure.Context
      public class AppDbContext:IdentityDbContext<IdentityUser, IdentityRole,string>
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
+        public virtual DbSet<Admin> Admins {  get; set; }   
+        public virtual DbSet<Tediye> Tediyeler { get; set; }
+        public virtual DbSet<Ikramiye> Ikramiyeler {get; set; }  
+        public virtual DbSet<KiyafetOdenegi>KiyafetOdenekleri { get; set; }   
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.ApplyConfigurationsFromAssembly(typeof(IEntityConfiguration).Assembly);
@@ -61,7 +67,7 @@ namespace BordroOtomasyon.Infrastructure.Context
             if (entry.State == EntityState.Modified)
             {
                 entry.Entity.Status = Status.Modified;
-                entry.Entity.ModeifiedBy = userId;
+                entry.Entity.ModifiedBy = userId;
                 entry.Entity.ModifiedDate = DateTime.Now;
 
             }
@@ -72,16 +78,18 @@ namespace BordroOtomasyon.Infrastructure.Context
             {
                 entry.Entity.Status = Status.Added;
                 entry.Entity.CreatedBy = userId;
-                entry.Entity.CreateDate = DateTime.Now;
+                entry.Entity.CreatedDate= DateTime.Now;
             }
 
         }
 
-        public override Task<int> SaveChangesAsync(CancellationToken cancellationToken)
+        public override Task<int> SaveChangesAsync(CancellationToken cancellationToken=default)
         {
             SetBaseProperties();
             return base.SaveChangesAsync(cancellationToken);
 
         }
+
+       
     }
 }

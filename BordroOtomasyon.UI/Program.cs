@@ -1,7 +1,8 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Configuration.Json;
+
 using BordroOtomasyon.Infrastructure.Extentions;
+
 namespace BordroOtomasyon.UI
 {
     internal static class Program
@@ -13,25 +14,31 @@ namespace BordroOtomasyon.UI
         [STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
-            ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
+
+
             var configuration = new ConfigurationBuilder()
+ 
             .SetBasePath(Directory.GetCurrentDirectory())
-            .AddJsonFile("appsettings.Json")
-            .Build();
+               .AddJsonFile("appsetting.json")
+                 .Build();
+            var serviceColection = new ServiceCollection();
+            ConfigureServices(serviceColection, configuration);
+
+            serviceProvider = serviceColection.BuildServiceProvider();
+
             ApplicationConfiguration.Initialize();
             Application.Run(serviceProvider.GetRequiredService<Form1>());
         }
-       private static void ConfigureServices(IServiceCollection services,IConfiguration configuration)
+        private static void ConfigureServices(IServiceCollection services, IConfiguration configuration)
         {
-            services.AddTransient<Form1>();  
+            services.AddTransient<Form1>();
             services.AddInfrastructureServices(configuration);
 
+
+
         }
-        
-       
-       
+
+
+
     }
 }

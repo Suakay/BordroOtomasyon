@@ -1,5 +1,6 @@
-﻿using BordroOtomasyon.Domain.BaseEntityConfiguration;
-using BordroOtomasyon.Domain.Models.Entites;
+﻿
+using BordroOtomasyon.Domain.Core.BaseEntityConfiguration;
+using BordroOtomasyon.Domain.Entities;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
 using System.Collections.Generic;
