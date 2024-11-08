@@ -22,9 +22,4 @@
     <ProjectReference Include="..\BordroOtomasyon.Domain\BordroOtomasyon.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Repositories\IkramiyeRepositories\" />
-    <Folder Include="Repositories\KiyafetOdenegiRepositories\" />
-  </ItemGroup>
-
 </Project>

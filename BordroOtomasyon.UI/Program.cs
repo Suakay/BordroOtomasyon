@@ -27,11 +27,11 @@ namespace BordroOtomasyon.UI
             serviceProvider = serviceColection.BuildServiceProvider();
 
             ApplicationConfiguration.Initialize();
-            Application.Run(serviceProvider.GetRequiredService<Form1>());
+            Application.Run(serviceProvider.GetRequiredService<Login>());
         }
         private static void ConfigureServices(IServiceCollection services, IConfiguration configuration)
         {
-            services.AddTransient<Form1>();
+            services.AddTransient<Login>();
             services.AddInfrastructureServices(configuration);
 
 
